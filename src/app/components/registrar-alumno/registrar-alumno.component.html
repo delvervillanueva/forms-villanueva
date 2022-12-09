@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="car text-center">
+                <div class="card-body">
+                 
+                   <h3>Registro de Alumno</h3>
+                   <span class="titulo"></span>
+                    <form class="mt-4" [formGroup]="alumosForm" >
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Nombres"
+                                formControlName="nombres" 
+                                [class.is-invalid]="Nombrenovalido" />
+                                <small *ngIf="Nombrenovalido" class="text-danger">
+                                 Campo obligatorio
+                                </small> 
+                                
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Apellidos"
+                                formControlName="apellidos"
+                                [class.is-invalid]="Apellidonovalido" />
+                                <small *ngIf="Apellidonovalido" class="text-danger">
+                                 Campo obligatorio
+                                </small>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Grado"
+                                formControlName="grado"/>
+                                <small *ngIf="Gradonovalido" class="text-danger">
+                                    Campo obligatorio
+                                </small>
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Sección"
+                                formControlName="seccion">
+                                <small *ngIf="Seccionnovalido" class="text-danger">
+                                    Campo obligatorio
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control mt-3" placeholder="Departamento/Provicia/Distrito"
+                            formControlName="direccion">
+                            <small *ngIf="Direccionnovalido" class="text-danger">
+                                Campo obligatorio
+                            </small>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control mt-3" placeholder="Lugar de Nacimiento"
+                            formControlName="lugar_nacimiento">
+                            <small *ngIf="Lugar_nacimiento_novalido" class="text-danger">
+                                Campo obligatorio
+                            </small>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control mt-3" placeholder="Correo"
+                            formControlName="correo">
+                            <small *ngIf="Correonovalido" class="text-danger">
+                                Campo obligatorio
+                            </small>
+                        </div>
+                        <div class="mt-3">
+                            <button type="text" class="btn btn-success mr-3">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+   
+</div>
+
